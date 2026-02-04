@@ -74,7 +74,17 @@ while True:
             print(f"Task cancelled: {task}")
         else:
             print("Task not found.")
+    elif choice == "7":
+     confirm = input("Clear all tasks? (yes/no): ").lower()
+
+     if confirm == "yes":
+        task_queue.clear()
+        print("Queue cleared.")
+     else:
+        print("Cancelled.")
 
     elif choice == "8":
         print("Scheduler shutting down ")
         break
+    else:
+       print("Invalid choice,try again!")
