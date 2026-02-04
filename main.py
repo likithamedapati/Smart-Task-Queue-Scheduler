@@ -46,6 +46,14 @@ while True:
         print("No tasks in queue.")
      else:
         print(f"Next task: {task_queue[0]}")
+    elif choice == "4":
+     print("\n--- Waiting Tasks ---")
+
+     if not task_queue:
+        print("Queue is empty.")
+     else:
+        for i, task in enumerate(task_queue, start=1):
+            print(f"{i}. {task}")
 
     elif choice == "8":
         print("Scheduler shutting down ")
