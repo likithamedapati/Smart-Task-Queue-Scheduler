@@ -28,6 +28,19 @@ while True:
      else:
         task_queue.append(task)
         print(f"Task added: {task}")
+    elif choice == "2":
+     if not task_queue:
+        print("No tasks to process.")
+     else:
+        task = task_queue.pop(0)
+        time_done = datetime.now().strftime("%H:%M:%S")
+
+        completed_tasks.append(task)
+        completed_time[task] = time_done
+
+        print(f"Processing: {task}")
+        print(f"Completed at {time_done}")
+        print("Great job! Ready for the next task 🚀")
 
     elif choice == "8":
         print("Scheduler shutting down 🧾")
