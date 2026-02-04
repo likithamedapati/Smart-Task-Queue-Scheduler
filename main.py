@@ -40,8 +40,13 @@ while True:
 
         print(f"Processing: {task}")
         print(f"Completed at {time_done}")
-        print("Great job! Ready for the next task 🚀")
+        print("Great job! Ready for the next task ")
+    elif choice == "3":
+     if not task_queue:
+        print("No tasks in queue.")
+     else:
+        print(f"Next task: {task_queue[0]}")
 
     elif choice == "8":
-        print("Scheduler shutting down 🧾")
+        print("Scheduler shutting down ")
         break
