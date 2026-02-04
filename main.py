@@ -54,6 +54,15 @@ while True:
      else:
         for i, task in enumerate(task_queue, start=1):
             print(f"{i}. {task}")
+    elif choice == "5":
+     print("\n--- Completed Tasks ---")
+
+     if not completed_tasks:
+        print("No tasks completed yet.")
+     else:
+        for task in completed_tasks:
+            time_done = completed_time.get(task, "Unknown")
+            print(f"{task} → completed at {time_done}")
 
     elif choice == "8":
         print("Scheduler shutting down ")
