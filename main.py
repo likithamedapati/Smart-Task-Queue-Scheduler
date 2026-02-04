@@ -20,7 +20,15 @@ while True:
     print("8. Exit")
 
     choice = input("Choose an option: ")
+    if choice == "1":
+     task = input("Enter task name: ")
 
-    if choice == "8":
+     if task.strip() == "":
+        print("Task cannot be empty.")
+     else:
+        task_queue.append(task)
+        print(f"Task added: {task}")
+
+    elif choice == "8":
         print("Scheduler shutting down 🧾")
         break
