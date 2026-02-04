@@ -63,6 +63,17 @@ while True:
         for task in completed_tasks:
             time_done = completed_time.get(task, "Unknown")
             print(f"{task} → completed at {time_done}")
+    elif choice == "6":
+     if not task_queue:
+        print("Queue is empty.")
+     else:
+        task = input("Enter task name to cancel: ")
+
+        if task in task_queue:
+            task_queue.remove(task)
+            print(f"Task cancelled: {task}")
+        else:
+            print("Task not found.")
 
     elif choice == "8":
         print("Scheduler shutting down ")
